@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { fetchCurrentWeather } from 'reducers/weatherReducer'
+import { CurrentCard } from './CurrentCard'
 
 const CurrentSection = styled.section`
   background-color: pink;
@@ -17,9 +18,12 @@ export const CurrentWeather = () => {
 
   return (
     <CurrentSection>
-      <p>{currentWeather.clouds}</p>
-      <p>{currentWeather.wind_speed}</p>
-      <p>{currentWeather.temp}</p>
+      <CurrentCard
+        clouds={currentWeather.clouds}
+        temp={currentWeather.temp}
+        feelsLike={currentWeather.feels_like}
+        windSpeed={currentWeather.wind_speed}
+        windDirection={currentWeather.wind_deg} />
     </CurrentSection>
   )
 }
