@@ -5,7 +5,7 @@ import { fetchCurrentWeather } from 'reducers/weatherReducer'
 import { CurrentCard } from './CurrentCard'
 
 const CurrentSection = styled.section`
-  background-color: pink;
+  displey: flex;
 `
 
 export const CurrentWeather = () => {
