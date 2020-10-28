@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import arrow from 'assets/arrow.png'
 
 const ArrowN = styled.img`
-transform: rotate(15deg);
   width: 10%; 
 `
 const ArrowNNW = styled.img`
